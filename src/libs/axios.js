@@ -8,7 +8,10 @@ const axiosIns = axios.create({
   // ================================
   // baseURL: 'https://some-domain.com/api/',
   // timeout: 1000,
-  // headers: {'X-Custom-Header': 'foobar'}
+  headers: {
+    authorization: 'omz8O3mxzWvgIeZO7wjhmvRlFBaRNe1HgIJ5VAyLZcOXHwg60BEOB88szMRMi8Xv',
+  },
+  baseURL: process.env.VUE_APP_API_V3,
 })
 
 Vue.prototype.$http = axiosIns

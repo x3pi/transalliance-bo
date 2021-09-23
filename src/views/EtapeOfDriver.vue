@@ -1,30 +1,43 @@
-<template>
-  <div>
-    <b-card title="EtapeOfDriver 🚀">
-      <b-card-text>accounts</b-card-text>
-      <b-card-text>Please make sure to read our <b-link
-        href="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/"
-        target="_blank"
-      >
-        Template Documentation
-      </b-link> to understand where to go from here and how to use our template.</b-card-text>
-    </b-card>
-
+<template lang="html">
+  <div class="centerx">
+    <input
+      v-model="colorLoading"
+      type="color"
+      name=""
+      value=""
+    >
+    <vs-button
+      type="gradient"
+      color="danger"
+      @click="openLoadingColor"
+    >
+      Danger
+    </vs-button>
   </div>
 </template>
 
 <script>
-import { BCard, BCardText, BLink } from 'bootstrap-vue'
+import Vue from 'vue'
+import Vuesax from 'vuesax'
 
+import 'vuesax/dist/vuesax.css'
+// Vuesax styles
+Vue.use(Vuesax, {
+  // options here
+})
 export default {
-  components: {
-    BCard,
-    BCardText,
-    BLink,
+  data() {
+    return {
+      colorLoading: '#7d0c3f',
+    }
+  },
+  methods: {
+    openLoadingColor() {
+      this.$vs.loading({ color: this.colorLoading })
+      setTimeout(() => {
+        this.$vs.loading.close()
+      }, 2000)
+    },
   },
 }
 </script>
-
-<style>
-
-</style>

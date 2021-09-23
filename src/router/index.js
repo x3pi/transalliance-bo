@@ -12,6 +12,11 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
+      redirect: '/Accounts',
+      name: 'Home',
+    },
+    {
+      path: '/Accounts',
       name: 'Accounts',
       component: () => import('@/views/Accounts.vue'),
       meta: {

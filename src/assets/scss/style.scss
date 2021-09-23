@@ -8,6 +8,12 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .table-responsive{
     overflow-x: unset;
 }
+.vgt-responsive {
+    overflow-x: unset !important;
+}
 .body{
     overflow: auto;
+}
+.card-table {
+    display: inline-block;
 }
